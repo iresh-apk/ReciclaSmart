@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #f6f8f6;
+  color: #1f2937;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+body.dark {
+  background-color: #112116;
+  color: #f6f6f6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(246, 248, 246, 0.8);
+  backdrop-filter: blur(5px);
+  padding: 1rem 0;
+}
+header .container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+header nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4b5563;
+  margin-left: 1.5rem;
+  text-decoration: none;
+}
+header nav a:hover {
+  color: #17cf54;
+}
+header button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+header button:hover {
+  background-color: #e5e7eb;
+}
+header button.dark {
+  color: #f6f6f6;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+@media (min-width: 864px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    padding: 6rem 2rem;
+  }
+}
+.hero .hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero .hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+@media (min-width: 480px) {
+  .hero .hero-text h1 {
+    font-size: 3rem;
+  }
+}
+.hero .hero-text h2 {
+  color: #4b5563;
+  font-weight: 400;
+}
+.hero .hero-text .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .hero .hero-text .buttons {
+    justify-content: flex-start;
+  }
+}
+.hero .hero-text .buttons .btn-primary {
+  background-color: #17cf54;
+  color: #112116;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  transition: transform 0.2s;
+}
+.hero .hero-text .buttons .btn-primary:hover {
+  transform: scale(1.05);
+}
+.hero .hero-text .buttons a {
+  color: #17cf54;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.hero .hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.hero .hero-img img {
+  max-height: 450px;
+}
+
+#how-it-works {
+  background-color: rgba(209, 213, 219, 0.3);
+  padding: 4rem 1rem;
+}
+#how-it-works .steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  #how-it-works .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#how-it-works .steps .step {
+  text-align: center;
+}
+#how-it-works .steps .step .number {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 2px solid #17cf54;
+  color: #17cf54;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+#how-it-works .steps .step h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+#how-it-works .steps .step p {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+#testimonials {
+  padding: 4rem 1rem;
+}
+#testimonials .cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  #testimonials .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#testimonials .cards .card {
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  background-color: white;
+  padding: 1.5rem;
+}
+#testimonials .cards .card p {
+  color: #4b5563;
+}
+#testimonials .cards .card .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+#testimonials .cards .card .user img {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+}
+
+#faq {
+  background-color: rgba(209, 213, 219, 0.3);
+  padding: 4rem 1rem;
+}
+#faq details {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+#faq details summary {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  cursor: pointer;
+}
+#faq details p {
+  margin-top: 0.5rem;
+  color: #4b5563;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+footer a {
+  color: #9ca3af;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+footer a:hover {
+  color: #17cf54;
+}
+footer .socials {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
